@@ -1,8 +1,12 @@
-# X Server theme setter
+#  🔥 X server theme setter
 This script will help you maintain a library of your favorite themes for Server X, and define them in a much easier and more practical way.
 
 **Preview:**
-Link of video.
+
+
+https://github.com/stackiller/xtheme/assets/50081384/8415114b-f8a2-4690-bbf1-1a53c091deec
+
+
 
 ## Script structure
 
