@@ -1,4 +1,4 @@
-# X Server theme setter.**
+# X Server theme setter.
 This script will help you maintain a library of your favorite themes for Server X, and define them in a much easier and more practical way.
 
 **Preview:**
