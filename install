@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function check_dir {
+if [ ! -d $HOME/.tools ]; then
+  echo $HOME/.tools
+fi;
+
+}
+
+function install {
+  check_dir;
+  chmod +x xtheme
+  cp xtheme $HOME/.tools
+  cp -r .x_themes $HOME
+  echo -e "[\e[5m * \e[0m]\e[38;5;46m Call xtheme, to get available themes, enjoy.\e[0m";
+}
+
+install;

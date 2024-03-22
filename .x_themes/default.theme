@@ -1,0 +1,17 @@
+! Primary font and powerline font for symbols
+*.font: xft:Cascadia Code PL:style=Regular:size=12,xft:MesloLGS Nerd Font:size=12
+*.boldFont: xft:Cascadia Code PL:style=Bold:size=12,xft:MesloLGS Nerd Font:style=Bold:size=12
+*.italicFont: xft:Cascadia Code PL:style=Italic:size=12,xft:MesloLGS Nerd Font:style=Italic:size=12
+*.boldItalicFont: xft:Cascadia Code PL:style=Bold Italic:size=12,xft:MesloLGS Nerd Font:style=Bold Italic:size=12
+
+! Background and Foreground defaults
+*.background: #000000
+*.foreground: #cecece
+
+! Geometry of Terminal
+*.scrollBar: false
+*.internalBorder: 20
+*.geometry: 80x17
+
+! Cursor
+*.cursorBlink: true
