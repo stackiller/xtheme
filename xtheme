@@ -33,6 +33,7 @@ function setTheme() {
   else
     eco "${bold}${green}Defining theme${reset} => ${temas[$1]}";
     xrdb -override $default_Xresources;
+    echo $temas_Dir/${temas[$1]};
     xrdb -merge "$temas_Dir/${temas[$1]}";
     echo "! ${temas[$1]}" > "$current_theme";
     xrdb -query >> "$current_theme";
@@ -53,9 +54,15 @@ function showThemes() {
 # get the available themes.
 function getThemes() {
   i=0;
-  for tema in $(ls $temas_Dir); do
+  for tema in $temas_Dir/*; do
+    renamed_tema=`basename "$tema" | sed 's/[[:space:]]/-/g'`;
+    
+    if [[ $tema != "$temas_Dir/$renamed_tema" ]]; then
+      mv "$tema" "$temas_Dir/$renamed_tema";
+    fi;
+
     if [[ ! ( $tema = "default.theme" || $tema = "current.theme" ) ]]; then
-      temas[$i]="$tema";
+      temas[$i]=$renamed_tema;
       i=$((i+1));
     fi;
   done;
