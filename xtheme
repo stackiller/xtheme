@@ -61,7 +61,7 @@ function getThemes() {
       mv "$tema" "$temas_Dir/$renamed_tema";
     fi;
 
-    if [[ ! ( $tema = "default.theme" || $tema = "current.theme" ) ]]; then
+    if [[ ! ( $renamed_tema = "default.theme" || $renamed_tema = "current.theme" ) ]]; then
       temas[$i]=$renamed_tema;
       i=$((i+1));
     fi;
