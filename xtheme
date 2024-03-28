@@ -46,7 +46,11 @@ function showThemes() {
   i=0;
   eco "${bold}Available themes:${reset}";
   for tema in ${temas[@]}; do
-    echo "|_ $i => ${temas[$i]}";
+    if [[ $i -lt 10 ]]; then
+      echo "|_ 0$i => ${temas[$i]}";
+    else
+      echo "|_ $i => ${temas[$i]}";
+    fi;
     i=$((i+1));
   done;
 }
@@ -59,6 +63,7 @@ function getThemes() {
     
     if [[ $tema != "$temas_Dir/$renamed_tema" ]]; then
       mv "$tema" "$temas_Dir/$renamed_tema";
+      rm $tema
     fi;
 
     if [[ ! ( $renamed_tema = "default.theme" || $renamed_tema = "current.theme" ) ]]; then
